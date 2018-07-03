@@ -31,9 +31,9 @@ io.on('connection', function(socket) {
     console.log('Message: ' + text);
 
     // Get a reply from API.ai
-
+// init
     let apiaiReq = apiai.textRequest(text, {
-      sessionId: "33668def77284d91a47e7cc648f56853"
+      sessionId: "33668def77284d91a47e7cc648f56853" //Developer access token
     });
 
     apiaiReq.on('response', (response) => {

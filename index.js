@@ -23,8 +23,7 @@ const apiai = require('apiai')("15c45c008c594a18a68d2f28b6e46609");
 
 // Web UI
 app.get('/', (req, res) => {
-  res.sendFile('index.html');
-});
+    res.sendFile(__dirname + '/index.html');});
 
 io.on('connection', function(socket) {
   socket.on('chat message', (text) => {
